@@ -25,7 +25,7 @@ find_asset () {
 
 training_data_asset_id=$(find_asset data_asset "credit_risk_training.csv")
 regression_data_asset_id=$(find_asset data_asset "credit_risk_regression.csv")
-notebook_id=$(find_asset notebook "train_model_jv")
+notebook_id=$(find_asset notebook "train_model")
 
 env_id=$(cpdctl environment list --output json -j "resources[?metadata.name=='$env_name'] | [0].metadata.asset_id" --raw-output)
 echo "Using notebook environment '$env_name': $env_id"
@@ -35,7 +35,7 @@ echo 1
 # assume there is only single user configured
 user_name=$(cpdctl config user list --output json -j '[0].Name' --raw-output)
 echo 2
-user_apikey=$(cpdctl config user get jaimev --output json -j "User.Password.Value" --raw-output)
+user_apikey=$(cpdctl config user get NOMBRE_USER --output json -j "User.Password.Value" --raw-output)
 echo $user_apikey
 
 cat > job.json <<-EOJSON
