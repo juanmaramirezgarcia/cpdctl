@@ -24,7 +24,7 @@ find_asset () {
 
 
 training_data_asset_id=$(find_asset data_asset "credit_risk_training.csv")
-echo "Found training_data_asset_id: $training_data_asset_id
+echo "Found training_data_asset_id: $training_data_asset_id"
 regression_data_asset_id=$(find_asset data_asset "credit_risk_regression.csv")
 notebook_id=$(find_asset notebook "train_model")
 
