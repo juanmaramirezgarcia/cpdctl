@@ -7,7 +7,7 @@ export PATH=$PATH:$PWD
 # DEV_SPACE_ID=986def6d-27bb-4887-aeeb-579874709e3d
 #
 PATH=$PATH:/usr/local/bin
-env_name=default_py3.8
+env_name=jupconda38
 job_name=train-scikit-model-job
 model_name=gcr-scikit-model
 trained_model_id_file=./trained_model_id
@@ -24,6 +24,7 @@ find_asset () {
 
 
 training_data_asset_id=$(find_asset data_asset "credit_risk_training.csv")
+echo "Found training_data_asset_id: $training_data_asset_id
 regression_data_asset_id=$(find_asset data_asset "credit_risk_regression.csv")
 notebook_id=$(find_asset notebook "train_model")
 
