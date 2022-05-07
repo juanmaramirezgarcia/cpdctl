@@ -46,13 +46,13 @@ cat > job.json <<-EOJSON
     "configuration": {
         "env_id": "$env_id",
         "env_type": "notebook",
-        "env_variables": [
-            "CPD_URL=$cpd_url",
-            "USER_NAME=$user_name",
-            "USER_PASSWORD=$user_apikey",
-            "TRAINING_DATA_ASSET_ID=$training_data_asset_id",
-            "MODEL_NAME=$model_name"
-        ]
+        "env_variables": {
+            "CPD_URL":"$cpd_url",
+            "USER_NAME":"$user_name",
+            "USER_PASSWORD":"$user_apikey",
+            "TRAINING_DATA_ASSET_ID":"$training_data_asset_id",
+            "MODEL_NAME"="$model_name"
+           }
     }
 }
 EOJSON
