@@ -51,7 +51,7 @@ cat > job.json <<-EOJSON
             "USER_NAME":"$user_name",
             "USER_PASSWORD":"$user_apikey",
             "TRAINING_DATA_ASSET_ID":"$training_data_asset_id",
-            "MODEL_NAME"="$model_name"
+            "MODEL_NAME":"$model_name"
            }
     }
 }
