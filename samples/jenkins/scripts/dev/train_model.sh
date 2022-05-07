@@ -57,7 +57,7 @@ cat > job.json <<-EOJSON
 }
 EOJSON
 
-echo $job.json
+cat job.json
 echo Starting job $job_name...
 
 job_run=$(cpdctl job run create --job '@./job.json' --job-run '{}' --async --output json)
