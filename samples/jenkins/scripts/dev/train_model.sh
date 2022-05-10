@@ -36,7 +36,7 @@ echo 1
 # assume there is only single user configured
 user_name=$(cpdctl config user list --output json -j '[0].User.Username' --raw-output)
 echo 2
-user_apikey=$(cpdctl config user get NOMBRE_USER --output json -j "User.Password.Value" --raw-output)
+user_apikey=$(cpdctl config user get juan --output json -j "User.Password.Value" --raw-output)
 echo $user_apikey
 
 cat > job.json <<-EOJSON
